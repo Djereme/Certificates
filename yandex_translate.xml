@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S3</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Translate</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Text</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C11</id>
+				<title>Перевод с русского на английский язык</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Перейти на сайт https://translate.yandex.ru/</preconds>
+										<steps># в правом верхнем углу  окна ввода, выбираем язык ввода - &quot;Русский&quot;
+# в левом верхнем углу окна перевода выбираем язык перевода - &quot;Английский&quot;
+# вводим текст на русском языке в окно ввода, пример :&quot;Привет мир&quot;
+
+
+</steps>
+										<expected>в правом окне перевода  - появится введенный ранее текст , но переведенный на английский язык, пример:&quot;Hello world&quot;![](index.php?/attachments/get/2)
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C12</id>
+				<title>Перевод с английского на русский язык</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/</preconds>
+										<steps># в правом верхнем углу  окна ввода, выбираем язык ввода - &quot;Английский&quot;
+# в левом верхнем углу окна перевода выбираем язык перевода - &quot;Русский&quot;
+# вводим текст на английском языке в окно ввода, пример : &quot;Hello, world&quot;
+</steps>
+										<expected>в правом окне перевода появится введенный ранее текст, но переведенный на русский язык, пример :&quot;Здравствуй, мир&quot;![](index.php?/attachments/get/3)
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C48</id>
+				<title>Ввод спецсимволов</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps># введем спецсимволы в окно ввода, пример : &quot; 123&quot;%*)+ &quot;
+в поле ввода и в поле перевода отобразятся одинаковые спецсимволы, если они не подлежат переводу , пример : &quot; 123&quot;%*)+ &quot;</steps>
+										<expected> # в поле перевода отобразятся те же спецсимволы, если они не подлежат переводу , пример : &quot; 123&quot;%*)+ &quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C13</id>
+				<title>Автозамена указанного языка ввода при введении текста с раскладки отличной от указанной</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/</preconds>
+										<steps># в правом верхнем углу  окна ввода, выбираем язык ввода - &quot;Английский&quot;
+# в левом верхнем углу окна перевода выбираем язык перевода - &quot;Русский&quot;
+# вводим текст на русском языке в окно ввода, пример : &quot;Самолет&quot;
+</steps>
+										<expected>язык ввода в правом верхнем углу ввода и  язык перевода в левом верхнем углу окна перевода  автоматически поменяются местами, фактический язык ввода будет соответствовать указанному </expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C45</id>
+				<title>Замена языка ввода языком перевода  посредством кнопки &quot;Переключить направление&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+
+</preconds>
+										<steps># в правом верхнем углу окна ввода, выбираем язык ввода - &quot;Английский&quot;
+# в левом верхнем углу окна перевода выбираем язык перевода - &quot;Русский&quot;
+# Нажимаем на кнопку &quot;Поменять направление&quot;, которая располагается между окном ввода и окном перевода , радом с выбранными языками ввода и перевода</steps>
+										<expected>язык ввода в правом верхнем углу ввода и язык перевода в левом верхнем углу окна перевода автоматически поменяются местами, теперь в правом верхнем углу окна ввода - &quot;Русский&quot;, а в левом верхнем углу окна перевода  - &quot;Английский&quot; язык</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C14</id>
+				<title>Подсказка с автозаполнением при введении части слова</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Перейти на сайт https://translate.yandex.ru/
+выбрать язык ввода и язык перевода</preconds>
+										<steps> в окно ввода начать вводить необходимое для перевода слово, пример : &quot;Самолет&quot;</steps>
+										<expected>начиная с первого введенного символа слова под ним появляется подсказка с возможным вариантом этого слова![](index.php?/attachments/get/4)
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C15</id>
+				<title>Очистка текста из поля ввода</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru</preconds>
+										<steps># В поле ввода вводим слово, пример :&quot;Самолет&quot;
+# в поле ввода , в левом верхнем углу нажимаем на кнопку &quot;очистить&quot; </steps>
+										<expected>Введенный текст исчезает и в поле ввода и в поле перевода</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C16</id>
+				<title>Озвучка введенного текста</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Перейти на сайт https://translate.yandex.ru/
+подключить к компьютеру устройство для вывода звука (колонки/гарнитуру/ наушники)
+настроить подключенное устройство</preconds>
+										<steps># В поле ввода вводим слово, пример :&quot;Самолет&quot;
+# В поле ввода сверху находится панель инструментов слева- направо располагаются 5 кнопок, нажимаем на вторую слева : &quot;Озвучить&quot;</steps>
+										<expected>Слышим голосовую озвучку введенного ранее слова.</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C17</id>
+				<title>Озвучка переведенного текста</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+подключить к компьютеру устройство для вывода звука (колонки/гарнитуру/ наушники)
+настроить подключенное устройство</preconds>
+										<steps># в поле ввода вводим слово, пример :&quot;Самолет&quot;
+# в поле перевода , отобразилось переведенное слово, пример : &quot;plane&quot;
+# в поле перевода в правом верхнем углу находится панель инструментов, состоящая из 6 кнопок, нажимаем на вторую(2) слева &quot;Озвучить&quot;
+ </steps>
+										<expected>слышим голосовую озвучку переведенного слова, написанного в окне перевода , пример : &quot;plane&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C18</id>
+				<title>Голосовой ввод текста</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>перейти на сайт https://translate.yandex.ru/
+подключить к компьютеру устройство для голосового ввода ( микрофон/гарнитуру)
+настроить подключенное устройство</preconds>
+										<steps># в окне ввода , в левом верхнем углу располагается панель инструментов, нажмите на третью кнопку слева &quot;Голосовой ввод&quot;
+# произнесите в устройство для голосового ввода слово, например :&quot;Самолет&quot;
+</steps>
+										<expected>в поле ввода появится произнесенное вами слово, в поле перевода  - перевод этого слова</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C19</id>
+				<title>Ввод текста с помощью встроенной экранной клавиатуры</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Перейти на сайт https://translate.yandex.ru/
+</preconds>
+										<steps># в окне ввода , в левом верхнем углу располагается панель инструментов, нажмите на четвертую кнопку слева &quot;Экранная клавиатура&quot;
+# под footerом страницы отобразится экранная клавиатура, ее язык будет соответствовать языку указанному в правом верхнем угле окна ввода
+#  с помощью экранной клавиатуры введите слово в окно ввода, пример : &quot;Самолет&quot;</steps>
+										<expected>в окне ввода отобразится введенное слово, пример :&quot;Самолет&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C20</id>
+				<title>Ввод спецсимволов с помощью экранной клавиатуры</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps># в окне ввода , в левом верхнем углу располагается панель инструментов, нажмите на четвертую кнопку слева &quot;Экранная клавиатура&quot;
+# под footerом страницы отобразится экранная клавиатура, ее язык будет соответствовать языку указанному в правом верхнем угле окна ввода
+# с помощью экранной клавиатуры введите спецсимволы в окно ввода, пример : &quot; 123&quot;%*)+ &quot;, для этого нажмите на экранной клавиатуре кнопку shift (стрелочка вверх) и на месте цифр появятся спецсимволы.</steps>
+										<expected>в поле ввода  и в поле перевода отобразятся одинаковые спецсимволы, если они не подлежат переводу , пример : &quot; 123&quot;%*)+ &quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C21</id>
+				<title>Автоисправление опечаток</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>перейти на сайт https://translate.yandex.ru/</preconds>
+										<steps># в окне ввода , в левом верхнем углу располагается панель инструментов, нажмите на пятую кнопку слева &quot;Автоисправление опечаток&quot;
+# в окно ввода вводим слово с опечаткой, пример: &quot;малоко&quot;</steps>
+										<expected>в окне ввода слово написанное с опечаткой подчеркивается синей волнистой линией, под словом появляется подсказка с правильно написанным словом, пример : &quot;молоко&quot;, в окне перевода переведено верное слово, пример :&quot;milk&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C22</id>
+				<title>Создание подборки переводов с помощью кнопки переключателя  &quot;Добавить в подборку&quot; / &quot;Удалить из подборки&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт : https://translate.yandex.ru/
+в окно ввода вводим слово, пример:  &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;</preconds>
+										<steps># в окне перевода , в правом верхнем углу располагается панель инструментов, нажмите на первую кнопку слева &quot;Добавить в подборку&quot;</steps>
+										<expected>внизу страницы появится push- оповещение с текстом : &quot; Перевод добавлен в подборку «Favourites»&quot;, кнопка переключатель &quot;Добавить в подборку&quot; - окрасилась в желтый цвет и приняла значение &quot;Удалить из подборки&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C52</id>
+				<title>Просмотр  подборок переводов</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт : https://translate.yandex.ru/
+</preconds>
+										<steps># в правом верхнем углу страницы нажимаем на первую с права кнопку :&quot;Подборки&quot; (если считать слева-направо)
+# выбираем необходимую подборку, пример &quot;Favourite&quot;, нажимаем на него</steps>
+										<expected>раскрывается hamburger menu , включающее в себя :&quot;Мои подборки&quot;, &quot;Мои подписки&quot; и &quot;Популярные подборки&quot;
+после нажатия на меню &quot;Favourite&quot;,мы видим список слов входящих в подборку</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C51</id>
+				<title>Удаление из подборки переводов с помощью кнопки переключателя  &quot;Добавить в подборку&quot; / &quot;Удалить из подборки&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт : https://translate.yandex.ru/
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;
+в окне перевода , в правом верхнем углу располагается панель инструментов, нажмите на первую кнопку слева &quot;Добавить в подборку&quot;
+</preconds>
+										<steps># в окне перевода , в правом верхнем углу располагается панель инструментов, нажмите на первую кнопку слева &quot;Удалить из подборки&quot; (кнопка окрашена в желтый цвет)
+</steps>
+										<expected>внизу страницы появится push- оповещение с текстом : &quot; Удалено из «Favourites»&quot;, кнопка переключатель &quot;Удалить из подборки&quot; - окрасилась в серый цвет и приняла значение &quot;Добавить в подборку&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C50</id>
+				<title>Изменение подборки переводов</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт : https://translate.yandex.ru/
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;
+в окне перевода , в правом верхнем углу располагается панель инструментов, нажмите на первую кнопку слева &quot;Добавить в подборку&quot;
+
+</preconds>
+										<steps># внизу страницы появится push- оповещение с текстом : &quot; Перевод добавлен в подборку «Favourites»&quot;, в правой части push-оповещения появится кнопка : &quot;Изменить подборку&quot;, нажимаем на нее
+# Открывается окно с заголовком : &quot;Переместить в подборку&quot; и ниже представлен список имеющихся подборок и кнопкой создания новой подборок, пример нажимаем на подборку &quot;Test&quot;</steps>
+										<expected>внизу страницы появится push- оповещение с текстом : &quot; Перевод добавлен в подборку &quot;Test&quot; &quot; , проверяем наличие нашего перевода в подборке Test  - он там есть.</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C23</id>
+				<title>Просмотр истории переводов</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт : https://translate.yandex.ru/
+
+</preconds>
+										<steps># в правом верхнем углу страницы нажимаем на первую с права (если считать слева-направо) кнопку :&quot;Подборки&quot; 
+# раскрывается hamburger menu , включающее в себя :&quot;Мои подборки&quot;, &quot;Мои подписки&quot; и &quot;Популярные подборки&quot;
+# Под заголовком &quot;Мои подборки&quot; - располагаются созданные нами подборки, пример &quot;Test&quot;, имеющиеся по умолчанию подборки, пример &quot;Favourites&quot;, и история переводов &quot;История&quot;
+# нажимаем на кнопку &quot;История&quot;
+</steps>
+										<expected>в hamburger menu  открывается страница со всеми переводами, которые были добавлены/удалены в какую-либо подборку, если в качестве подборки была выбрана &quot;История&quot; - то пара слово-перевод - дублируется</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C24</id>
+				<title>Копирование переведенного текста</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;</preconds>
+										<steps># в окне перевода , в правом верхнем углу располагается панель инструментов, нажмите на третью кнопку слева &quot;Копировать&quot;
+</steps>
+										<expected>над кнопкой копировать появится push - &quot;перевод скопирован&quot;,  в окне перевода переведенное слов, пример :&quot;plane&quot;, выделится синим цветом.
+вставим в окно ввода скопированный перевод - перевод скопировался.</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C25</id>
+				<title>Оценка перевода &quot;Хороший перевод&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;
+
+</preconds>
+										<steps>в окне перевода , в правом верхнем углу располагается панель инструментов, нажимаем на пятую кнопку слева &quot;Хороший перевод&quot; (большой палец вверх)
+</steps>
+										<expected>Кнопка &quot;Хороший перевод&quot; (большой палец вверх) окрасится в зеленый цвет, в окне перевода появится всплывающее окно &quot;Спасибо&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C53</id>
+				<title>Оценка перевода &quot;Плохой перевод&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;
+
+</preconds>
+										<steps>в окне перевода , в правом верхнем углу располагается панель инструментов, нажимаем на шестую кнопку слева &quot;Плохой перевод&quot; (большой палец вниз)
+
+</steps>
+										<expected>Кнопка &quot;плохой перевод&quot; (большой палец вниз) окрасится в красный цвет, в окне перевода появится всплывающее окно &quot;Спасибо&quot; с кнопками &quot;Закрыть&quot; и &quot;Предложить свой вариант&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C26</id>
+				<title>Отправка ссылки на перевод в  VK</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;
+
+</preconds>
+										<steps># в окне перевода , в правом верхнем углу располагается панель инструментов, нажимаем на  четвертую кнопку слева &quot;Поделиться&quot; 
+# открывается окно с ссылкой на получившийся перевод, кнопкой &quot;Копировать&quot; , четырьмя вариантам соцсетей в которых можно поделиться переводом &quot;VK&quot;, &quot;Facebook&quot;, &quot;OK&quot; и почтовые клиенты , а также кнопкой &quot;Найти в Яндексе&quot;
+# Нажимаем на кнопку &quot;VK&quot;
+</steps>
+										<expected>Идет перенаправление на страницу в  VK, где можно выбрать аудиторию, оставить комментарий и отправить ссылку, после чего страница автоматически закрывается</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C57</id>
+				<title>Отправка ссылки на перевод  на электронную  почту</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;
+
+</preconds>
+										<steps># в окне перевода , в правом верхнем углу располагается панель инструментов, нажимаем на  четвертую кнопку слева &quot;Поделиться&quot; 
+# открывается окно с ссылкой на получившийся перевод, кнопкой &quot;Копировать&quot; , четырьмя вариантам соцсетей в которых можно поделиться переводом &quot;VK&quot;, &quot;Facebook&quot;, &quot;OK&quot; и почтовые клиенты , а также кнопкой &quot;Найти в Яндексе&quot;
+# Нажимаем на кнопку &quot;почтовые клиенты&quot;
+</steps>
+										<expected>Идет перенаправление в приложение почтового клиента установленного на компьютере</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C58</id>
+				<title>Поиск переведенного слова в Яндексе</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;
+
+</preconds>
+										<steps># в окне перевода , в правом верхнем углу располагается панель инструментов, нажимаем на  четвертую кнопку слева &quot;Поделиться&quot; 
+# открывается окно с ссылкой на получившийся перевод, кнопкой &quot;Копировать&quot; , четырьмя вариантам соцсетей в которых можно поделиться переводом &quot;VK&quot;, &quot;Facebook&quot;, &quot;OK&quot; и почтовые клиенты , а также кнопкой &quot;Найти в Яндексе&quot;
+# Нажимаем на кнопку &quot;Найти в Яндексе&quot;
+</steps>
+										<expected>Идет перенаправление на страницу Яндекс поиска, где уже осуществлен поиск по переведенному слову, пример :&quot;plane&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C56</id>
+				<title>Отправка ссылки на перевод в Facebook</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;
+
+</preconds>
+										<steps># в окне перевода , в правом верхнем углу располагается панель инструментов, нажимаем на  четвертую кнопку слева &quot;Поделиться&quot; 
+# открывается окно с ссылкой на получившийся перевод, кнопкой &quot;Копировать&quot; , четырьмя вариантам соцсетей в которых можно поделиться переводом &quot;VK&quot;, &quot;Facebook&quot;, &quot;OK&quot; и почтовые клиенты , а также кнопкой &quot;Найти в Яндексе&quot;
+# Нажимаем на кнопку &quot;Facebook&quot;
+</steps>
+										<expected>Идет перенаправление на страницу в  &quot;Facebook&quot;, где можно выбрать куда отправить ссылку в ленту или в историю, оставить комментарий и отправить ссылку кнопкой &quot;На &quot;Facebook&quot;&quot;, после чего страница автоматически закрывается</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C55</id>
+				<title>Отправка ссылки на перевод в  ОК</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru
+в окно ввода вводим слово, пример: &quot;Самолет&quot;, в окне перевода отобразился перевод этого слова , пример :&quot;plane&quot;
+
+</preconds>
+										<steps># в окне перевода , в правом верхнем углу располагается панель инструментов, нажимаем на  четвертую кнопку слева &quot;Поделиться&quot; 
+# открывается окно с ссылкой на получившийся перевод, кнопкой &quot;Копировать&quot; , четырьмя вариантам соцсетей в которых можно поделиться переводом &quot;VK&quot;, &quot;Facebook&quot;, &quot;OK&quot; и почтовые клиенты , а также кнопкой &quot;Найти в Яндексе&quot;
+# Нажимаем на кнопку &quot;OK&quot;
+</steps>
+										<expected>Идет перенаправление на страницу в  &quot;OK&quot;, где можно отправить ссылку, после чего страница автоматически закрывается</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C46</id>
+				<title>Отображение связанной со словом информации в блоке &quot;Связанные слова&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Перейти на сайт : https://translate.yandex.ru/
+</preconds>
+										<steps>в поле ввода пишем слово, пример &quot;Самолет&quot;</steps>
+										<expected>Под полем ввода появляется заголовок: &quot;Связанные слова&quot; с блоком слов, он включает в себя синонимы к введенному ранее слову, пример &quot;Самолет&quot;, и родственные слова</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C60</id>
+				<title>Отображение связанной со словом информации в блоке &quot;Словарь&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Перейти на сайт : https://translate.yandex.ru/
+</preconds>
+										<steps>в поле ввода пишем слово, пример &quot;Самолет&quot;</steps>
+										<expected>Под полем перевода появляется заголовок: &quot;Словарь&quot; с блоком слов, он включает в себя введенное ранее слово, пример &quot;Самолет&quot;, определяет его часть речи, и синонимы этого слова на языке перевода</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C59</id>
+				<title>Отображение связанной со словом информации  в блоке  &quot;Примеры&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Перейти на сайт : https://translate.yandex.ru/
+</preconds>
+										<steps># в поле ввода пишем слово, пример &quot;Самолет&quot;, 
+# Под полем ввода появляется заголовок: &quot;Связанные слова&quot; с блоком слов, он включает в себя синонимы к введенному ранее слову, пример &quot;Самолет&quot;, и родственные слова</steps>
+										<expected>Под блоком &quot;Связанные слова&quot; - располагается блок &quot;Примеры&quot;, шириной во всю страницу. Данный блок включает в себя примеры употребления переведенного слова, пример &quot;plane&quot;, и его синонимов в предложениях</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C61</id>
+				<title>Отображение связанной со словом информации  в блоке &quot;прочие переводы&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Перейти на сайт : https://translate.yandex.ru/
+</preconds>
+										<steps>в поле ввода пишем слово, пример &quot;Самолет&quot;
+Под полем ввода появляется заголовок: &quot;Связанные слова&quot; с блоком слов, он включает в себя синонимы к введенному ранее слову, пример &quot;Самолет&quot;, и родственные слова
+Под блоком &quot;Связанные слова&quot; - располагается блок &quot;Примеры&quot;, шириной во всю страницу. Данный блок включает в себя примеры употребления переведенного слова, пример &quot;plane&quot;, и его синонимов в предложениях
+</steps>
+										<expected>Под блоком &quot;Примеры&quot; располагается блок &quot;прочие переводы&quot; , 2 столбца шириной во всю страницу. Данный блок включает в себя иные варианты перевода введенного слова, пример: &quot;Самолет&quot;, зависящие от контекста предложения в котором оно употреблено.
+
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C47</id>
+				<title>Лимит введенных символов</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/</preconds>
+										<steps># в поле ввода вводим заранее заготовленный текст содержащий 10000 знаков с пробелами</steps>
+										<expected>в правом нижнем углу поля ввода  - указано количество введенных знаков = 10000, в окне перевода полностью переведенный текст</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C62</id>
+				<title>Превышение лимита введенных символов</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/</preconds>
+										<steps># в поле ввода вводим заранее заготовленный текст содержащий 10008 знаков с пробелами</steps>
+										<expected>в правом нижнем углу поля ввода  - указано количество введенных знаков = 10008/10000 и выделено красным цветом, в окне перевода переведено только первые 10000 знаков включая пробелы, остальные знаки не отображаются</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C49</id>
+				<title>Перевод в Google</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт: https://translate.yandex.ru/</preconds>
+										<steps># в поле ввода вводим слово, пример : &quot; Самолет&quot;
+#  В поле перевода отобразилось это слово переведенное на выбранный язык, пример &quot;Английский&quot; &quot;plane&quot;
+# в правом нижнем углу поля перевода появилось заголовок &quot;Перевести в&quot; и 2 кнопки &quot;Google&quot; и &quot;Bing&quot;, нажимаем на первую кнопку( если считать слева-направо)</steps>
+										<expected>в соседней вкладке открывается страница &quot;Google Переводчика&quot; с введенным в поле ввода словом, пример : &quot; Самолет&quot;, его переводом и сопутствующей информацией</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C54</id>
+				<title>Перевод в Bing</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт: https://translate.yandex.ru/
+
+</preconds>
+										<steps>в поле ввода вводим слово, пример : &quot; Самолет&quot;
+В поле перевода отобразилось это слово переведенное на выбранный язык, пример &quot;Английский&quot; &quot;plane&quot;
+в правом нижнем углу поля перевода появилось заголовок &quot;Перевести в&quot; и 2 кнопки &quot;Google&quot; и &quot;Bing&quot;, нажимаем на вторую кнопку( если считать слева-направо)
+</steps>
+										<expected>в соседней вкладке открывается страница &quot;Microsoft Translator для бизнеса&quot; с введенным в поле ввода словом, пример : &quot; Самолет&quot;, его переводом и сопутствующей информацией</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Pictures</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C38</id>
+				<title>Добавить картинку с текстом в формате png</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+ в header выбираем вкладку &quot;Картинка&quot; - она пятая если считать слева-направо</preconds>
+										<steps># в поле загрузки изображения нажимаем на кнопку &quot;Выберете файл&quot;
+# в окне выбора выбираем картинку текст с которой нам необходимо перевести, пример картинка с русским текстом в формате png
+</steps>
+										<expected>картинка отобразилась в окне загрузки и текст распознался, при нажатии на слово/строку/блок, в зависимости от способа перевода ( его можно указать в левом верхнем углу окна загрузки), текст будет переводится на выбранный язык</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C39</id>
+				<title>Добавить картинку без текста</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Картинка&quot; - она пятая если считать слева-направо
+
+</preconds>
+										<steps># в поле загрузки изображения нажимаем на кнопку &quot;Выберете файл&quot;
+# в окне выбора выбираем картинку , пример картинка  без текста
+</steps>
+										<expected>картинка отобразилась в окне загрузки с пустым слоем , поверх располагается текст ошибки &quot;Текст не распознан&quot; и рекомендации &quot;Загрузите изображение крупнее и четче, проверьте направление перевода&quot; ниже располагается кнопка &quot;Повторить попытку&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C40</id>
+				<title>Добавить картинку c текстом в формате  jpeg</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Картинка&quot; - она пятая если считать слева-направо
+</preconds>
+										<steps>
+# в поле загрузки изображения нажимаем на кнопку &quot;Выберете файл&quot;
+# в окне выбора выбираем картинку текст с которой нам необходимо перевести, пример картинка с русским текстом в формате jpeg
+</steps>
+										<expected>картинка отобразилась в окне загрузки и текст распознался, при нажатии на слово/строку/блок, в зависимости от способа перевода ( его можно указать в левом верхнем углу окна загрузки), текст будет переводится на выбранный язык</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C42</id>
+				<title>Перетащить картинку в поле загрузки</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Картинка&quot; - она пятая если считать слева-направо
+
+
+</preconds>
+										<steps>в поле загрузки перетаскиваем картинку текст с которой нам необходимо перевести, пример картинка с русским текстом в формате jpeg
+</steps>
+										<expected>картинка отобразилась в окне загрузки и текст распознался, при нажатии на слово/строку/блок, в зависимости от способа перевода ( его можно указать в левом верхнем углу окна загрузки), текст будет переводится на выбранный язык</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C43</id>
+				<title>Очистить экран перевода картинки</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Картинка&quot; - она пятая если считать слева-направо
+в поле загрузки перетаскиваем картинку текст с которой нам необходимо перевести, пример картинка с русским текстом в формате jpeg
+картинка отобразилась в окне загрузки и текст распознался, при нажатии на слово/строку/блок, в зависимости от способа перевода ( его можно указать в левом верхнем углу окна загрузки), текст будет переводится на выбранный язык</preconds>
+										<steps># в правом верхнем углу нажимаем на кнопку &quot;Очистить&quot;</steps>
+										<expected>Поле загрузки пустое по центру располагается кнопку &quot;Выберете файл&quot; и надпись &quot;или перетащите картинку сюда&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C44</id>
+				<title>При неудачной загрузке воспользоваться кнопкой &quot; повторить загрузку&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Картинка&quot; - она пятая если считать слева-направо
+</preconds>
+										<steps># в поле загрузки изображения нажимаем на кнопку &quot;Выберете файл&quot;
+# в окне выбора выбираем картинку , пример картинка без текста
+# картинка отобразилась в окне загрузки с пустым слоем , поверх располагается текст ошибки &quot;Текст не распознан&quot; и рекомендации &quot;Загрузите изображение крупнее и четче, проверьте направление перевода&quot; ниже располагается кнопка &quot;Повторить попытку&quot;
+# нажимаем кнопку &quot;Повторить попытку&quot;</steps>
+										<expected>Откроется окно выбора картинки, выбираем картинку текст с которой нам необходимо перевести.</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Document</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C32</id>
+				<title>Загрузить пустой документ, размером 0 байт</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Документ&quot; - она четвертая если считать слева-направо
+
+</preconds>
+										<steps># в поле загрузки  по центру располагается подсказка &quot;Загрузите документ .doc, .docx, .pdf, .xls, .xlsx, .ppt, .pptx размером до 5 МБ&quot;, а под ней кнопка &quot;Загрузить&quot;
+# нажимаем на кнопку &quot;Загрузить&quot;
+# в окне выбора выбираем документ , пример пустой документ формата .docx, размером 0 байт
+
+</steps>
+										<expected>Не удалось обработать файл. Проверьте соединение с интернетом или загрузите файл в другом формате
+В окне загрузки появился текст ошибки &quot;Ошибка&quot; и рекомендации &quot;Не удалось обработать файл. Проверьте соединение с интернетом или загрузите файл в другом формате&quot; ниже располагается кнопка &quot;Повторить попытку&quot;
+
+</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C33</id>
+				<title>Загрузить документ размеров выше 5 мб</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Документ&quot; - она четвертая если считать слева-направо
+
+</preconds>
+										<steps># в поле загрузки по центру располагается подсказка &quot;Загрузите документ .doc, .docx, .pdf, .xls, .xlsx, .ppt, .pptx размером до 5 МБ&quot;, а под ней кнопка &quot;Загрузить&quot;
+# нажимаем на кнопку &quot;Загрузить&quot;
+# в окне выбора выбираем документ , пример документ формата .docx, размером 6.52 Мб
+</steps>
+										<expected>В окне загрузки появился текст ошибки &quot;Ошибка. Размер файла превышает 5 МБ&quot; </expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C34</id>
+				<title>Загрузить документ допустимого формата и размера</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Документ&quot; - она четвертая если считать слева-направо
+
+</preconds>
+										<steps>в поле загрузки по центру располагается подсказка &quot;Загрузите документ .doc, .docx, .pdf, .xls, .xlsx, .ppt, .pptx размером до 5 МБ&quot;, а под ней кнопка &quot;Загрузить&quot;
+нажимаем на кнопку &quot;Загрузить&quot;
+в окне выбора выбираем документ , пример документ формата .docx, размером 15,2 Кб
+</steps>
+										<expected>Документ полностью загрузился, текст распознан, во вкладке Оригинал - отображается загруженный текст, во вкладке перевода - текст переведен на выбранный язык</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C36</id>
+				<title>Перетащить документ в поле загрузки</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Документ&quot; - она четвертая если считать слева-направо
+в поле загрузки по центру располагается подсказка &quot;Загрузите документ .doc, .docx, .pdf, .xls, .xlsx, .ppt, .pptx размером до 5 МБ&quot;, а под ней кнопка &quot;Загрузить&quot;
+
+
+
+</preconds>
+										<steps># в поле загрузки перетаскиваем картинку документ , пример документ формата .docx, размером 15,2 Кб
+
+</steps>
+										<expected>Документ полностью загрузился, текст распознан, во вкладке Оригинал - отображается загруженный текст, во вкладке перевода - текст переведен на выбранный язык</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C37</id>
+				<title>Скачать переведенный документ</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Документ&quot; - она четвертая если считать слева-направо
+в поле загрузки по центру располагается подсказка &quot;Загрузите документ .doc, .docx, .pdf, .xls, .xlsx, .ppt, .pptx размером до 5 МБ&quot;, а под ней кнопка &quot;Загрузить&quot;
+в поле загрузки перетаскиваем документ , пример документ формата .docx, размером 15,2 Кб
+Документ полностью загрузился, текст распознан, во вкладке Оригинал - отображается загруженный текст, во вкладке перевода - текст переведен на выбранный язык</preconds>
+										<steps># в header  справа от вкладки &quot;Картинки&quot; появились 2 кнопки &quot;Загрузить&quot; и &quot;Скачать&quot;
+# нажимаем на кнопку &quot;Скачать&quot;</steps>
+										<expected>Переведенный файл скачен на компьютер и находится в папке указанной по умолчанию для скачивающихся файлов.</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Site</name>
+		<description></description>
+						
+		<cases>
+									
+						<case>
+				<id>C30</id>
+				<title>Адрес сайта введен верно</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Сайт&quot; - она третья если считать слева-направо
+</preconds>
+										<steps># Справа от вкладки &quot;Документ&quot; появилось окно ввода для адреса сайта и кнопка &quot;Перевести&quot;
+# в окно ввода вставляем адрес сайта который нужно перевести, пример https://yandex.ru/
+# нажимаем кнопку &quot;Перевести&quot;</steps>
+										<expected> Во вкладке оригинал открывается страница сайта на оригинальном языке, во вкладке перевода  - страница сайта переведена на выбранный язык, переведенный сайт полностью функционирует</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C27</id>
+				<title>Адрес сайта введен не верно</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Сайт&quot; - она третья если считать слева-направо
+
+</preconds>
+										<steps># Справа от вкладки &quot;Документ&quot; появилось окно ввода для адреса сайта и кнопка &quot;Перевести&quot;
+# в окно ввода вставляем адрес сайта который нужно перевести, пример https://yndex.ru/
+# нажимаем кнопку &quot;Перевести&quot;
+</steps>
+										<expected>появилось сообщение об ошибке: &quot;Не удалось перевести страницу&quot;, текст с рекомендациями :&quot;Если в интернете есть другая страница с нужным вам содержанием, попробуйте перевести её.&quot; и кнопка &quot;Искать в Яндексе&quot;</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C28</id>
+				<title>Вертикальное отображение окна</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Сайт&quot; - она третья если считать слева-направо
+Справа от вкладки &quot;Документ&quot; появилось окно ввода для адреса сайта и кнопка &quot;Перевести&quot;
+в окно ввода вставляем адрес сайта который нужно перевести, пример https://yandex.ru/
+
+</preconds>
+										<steps># Нажимаем кнопку &quot;Перевести&quot;
+# Во вкладке оригинал открывается страница сайта на оригинальном языке, во вкладке перевода - страница сайта переведена на выбранный язык, переведенный сайт полностью функционирует
+# в правом верхнем углу страницы можно выбрать способ отображения окон(оригинала и перевода) - по умолчанию выбрано  &quot;Отображать одно окно&quot;, 
+# Нажимаем на третью кнопку в правом верхнем углу страницы ( если считать слева- направо) - &quot;Отображать окна вертикально&quot;</steps>
+										<expected>Окна оригинала и перевода находятся рядом друг с другом - вертикально : оригинал - слева , перевод -справа</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C29</id>
+				<title>Горизонтальное отображение окна</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Сайт&quot; - она третья если считать слева-направо
+Справа от вкладки &quot;Документ&quot; появилось окно ввода для адреса сайта и кнопка &quot;Перевести&quot;
+в окно ввода вставляем адрес сайта который нужно перевести, пример https://yandex.ru/
+
+</preconds>
+										<steps># Нажимаем кнопку &quot;Перевести&quot;
+# Во вкладке оригинал открывается страница сайта на оригинальном языке, во вкладке перевода - страница сайта переведена на выбранный язык, переведенный сайт полностью функционирует
+# в правом верхнем углу страницы можно выбрать способ отображения окон(оригинала и перевода) - по умолчанию выбрано &quot;Отображать одно окно&quot;,
+# Нажимаем на четвертую кнопку в правом верхнем углу страницы ( если считать слева- направо) - &quot;Отображать окна горизонтально&quot;
+</steps>
+										<expected>Окна оригинала и перевода находятся рядом друг с другом - горизонтально : оригинал - сверху , перевод под ним снизу</expected>
+									</custom>
+							</case>
+												
+						<case>
+				<id>C31</id>
+				<title>Отправка ссылки на перевод</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references> 
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Переходим на сайт https://translate.yandex.ru/
+в header выбираем вкладку &quot;Сайт&quot; - она третья если считать слева-направо
+Справа от вкладки &quot;Документ&quot; появилось окно ввода для адреса сайта и кнопка &quot;Перевести&quot;
+в окно ввода вставляем адрес сайта который нужно перевести, пример https://yandex.ru/
+Нажимаем кнопку &quot;Перевести&quot;
+Во вкладке оригинал открывается страница сайта на оригинальном языке, во вкладке перевода - страница сайта переведена на выбранный язык, переведенный сайт полностью функционирует
+
+</preconds>
+										<steps># в правом верхнем углу страницы есть кнопка &quot;Поделиться&quot;, она первая если считать слева-направо
+# Нажимаем кнопку &quot;Поделиться&quot;</steps>
+										<expected>открылось модальное окно с ссылкой на перевод и  вариантами социальных сетей, где можно поделиться данной ссылкой &quot;VK&quot;, &quot;Facebook&quot;, &quot;OK&quot; и почтовые клиенты</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+	</sections>
+</suite>
